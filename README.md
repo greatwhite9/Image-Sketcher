@@ -30,19 +30,19 @@ pip install gradio opencv-python numpy
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/greatwhite9/sketch-image-generator.git
+git clone https://github.com/greatwhite9/Image-Sketcher.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd sketch-image-generator
+cd Image-Sketcher
 ```
 
 3. Run the script:
 
 ```bash
-python sketch_generator.py
+python image_sketcher.py
 ```
 
 4. Access the Gradio interface in your web browser at the provided URL.
