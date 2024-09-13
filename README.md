@@ -1,25 +1,25 @@
-# Sketch Image Generator
+# Image Sketch Generator
 
 ## Overview
 
-This repository contains a simple image sketch generator using Gradio and OpenCV. The script takes an input image and transforms it into a sketch-like version using various image processing techniques.
+This project is an **Image Sketch Generator** that transforms images into sketch-like drawings using **OpenCV** and **NumPy**. The interface is built using **Gradio**, allowing users to easily upload and convert images into sketches through a web interface.
 
 ## Features
 
-- Converts input image to a sketch
-- Utilizes Gradio for easy user interaction
-- Integrates OpenCV for image processing
+- Converts any input image into a pencil sketch
+- Built using **Gradio** for a simple and user-friendly interface
+- Employs **OpenCV** for efficient image processing
 
 ## Requirements
 
 - Python 3.x
 - Gradio
 - OpenCV
-- Numpy
+- NumPy
 
 ## Installation
 
-You can install the required packages using the following command:
+Install the necessary packages with the following command:
 
 ```bash
 pip install gradio opencv-python numpy
@@ -29,40 +29,39 @@ pip install gradio opencv-python numpy
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/greatwhite9/Image-Sketcher.git
-```
+    ```bash
+    git clone https://github.com/greatwhite9/Image-Sketcher.git
+    ```
 
 2. Navigate to the project directory:
 
-```bash
-cd Image-Sketcher
-```
+    ```bash
+    cd Image-Sketcher
+    ```
 
 3. Run the script:
 
-```bash
-python image_sketcher.py
-```
+    ```bash
+    python image_sketcher.py
+    ```
 
-4. Access the Gradio interface in your web browser at the provided URL.
+4. After running the script, access the **Gradio** interface via the link provided in the terminal. You can then upload an image and see its sketch-like transformation in real time.
 
 ## How it Works
 
-The `sketch` function in the script takes an image as input, converts it to a grayscale image, inverts the colors, applies a Gaussian blur, and finally, generates the sketch-like effect. The Gradio interface allows users to upload an image and view the transformed output.
+The `sketch` function follows these steps to create the sketch effect:
+1. Converts the input image to grayscale.
+2. Inverts the grayscale image.
+3. Applies a **Gaussian blur** to the inverted image.
+4. Inverts the blurred image.
+5. Divides the grayscale image by the inverted blurred image to generate the final sketch.
+
+Gradio serves as the web-based interface, making it easy for users to interact with the tool by uploading images and viewing their sketched versions.
 
 ## Customization
 
-Feel free to customize the script or integrate it into your projects. You can modify the parameters of the image processing functions or extend the functionality as needed.
+You can adjust the image processing parameters, such as the **Gaussian blur** kernel size or the scaling factor in the `cv2.divide()` function, to fine-tune the sketching effect.
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions, improvements, or bug fixes, please open an issue or create a pull request.
-
-## Acknowledgments
-
-- Gradio: [https://www.gradio.app/](https://www.gradio.app/)
-- OpenCV: [https://opencv.org/](https://opencv.org/)
-- Numpy: [https://numpy.org/](https://numpy.org/)
-
-Thank you for using the Sketch Image Generator! If you have any questions or concerns, please feel free to reach out.
+Contributions are welcome! If you have ideas for new features, optimizations, or bug fixes, feel free to create an issue or submit a pull request.
